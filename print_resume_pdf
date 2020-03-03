@@ -1,0 +1,2 @@
+#!/bin/bash
+wkhtmltopdf -B 10mm -T 10mm -L 10mm -R 10mm -s Letter ./JE-Resume.html --allow ./resume.css ./James_Eubanks_Resume.pdf
