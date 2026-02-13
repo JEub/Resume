@@ -1,2 +1,4 @@
 #!/bin/bash
-wkhtmltopdf -B 10mm -T 10mm -L 10mm -R 10mm -s Letter ./JE-Resume.html --allow ./resume.css ./James_Eubanks_Resume.pdf
+DATE_SUFFIX=$(date +"%b%Y")
+/snap/bin/chromium --headless --disable-gpu --no-pdf-header-footer --print-to-pdf="James_Eubanks_Resume_${DATE_SUFFIX}.pdf" ./JE-Resume.html
+echo "Generated James_Eubanks_Resume_${DATE_SUFFIX}.pdf with no header and zero margins."
